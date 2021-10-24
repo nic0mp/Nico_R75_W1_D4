@@ -22,6 +22,7 @@ class Cart():
 
 myCart = Cart()
 
+# Test
 myCart.add2Cart('milk')
 myCart.add2Cart('milk')
 myCart.showMyCart()
