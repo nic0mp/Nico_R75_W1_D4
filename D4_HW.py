@@ -28,3 +28,21 @@ myCart.add2Cart('milk')
 myCart.showMyCart()
 myCart.add2Cart('pork')
 myCart.showMyCart()
+
+def run():
+    while True:
+        response = input('What do you want to do? add/show/ or quit')
+        
+        if response.lower()== 'quit':
+            myCart.showMyCart()
+            print('Thanks for shopping')
+            break
+        elif response.lower() == 'add':
+            myCart.add2Cart()
+        elif response.lower() == 'show':
+            myCart.showMyCart()
+            
+
+run()
+ 
+    
