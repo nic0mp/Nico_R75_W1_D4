@@ -1,37 +1,36 @@
-# Exercise 1 - Turn the shopping cart program from yesterday into an object-oriented program
-# The comments in the cell below are there as a guide for thinking about the problem. However, 
-# if you feel a different way is best for you and your own thought process, please do what feels best
-#  for you by all means.
 # Create a class called cart that retains items and has methods to add, remove, and show
 
 class Cart():
     
     
     def __init__(self):
-       self.cart = []
+        self.cart = []
 
-    def add2Cart(self,item):
-        self.cart.append(item)
+    def add2Cart(self):
+        products = input('What would you like to add? ')
+        self.cart.append(products)
 
     def removeFromCart(self,item):
-        self.cart.remove(item)
+        removedItem = input('What would you like to remove? ')
+        self.cart.remove(removedItem)
 
     def showMyCart(self):
-        print(self.cart)
+        print('These items are in your cart:')
+        for item in self.cart:
+            print(item)
 
 
 myCart = Cart()
 
 # Test
-myCart.add2Cart('milk')
-myCart.add2Cart('milk')
-myCart.showMyCart()
-myCart.add2Cart('pork')
-myCart.showMyCart()
+# myCart.add2Cart('milk')
+# myCart.add2Cart('milk')
+# myCart.showMyCart()
+# myCart.add2Cart('pork')
 
 def run():
     while True:
-        response = input('What do you want to do? add/show/ or quit')
+        response = input('What do you want to do? add/show/remove or quit ')
         
         if response.lower()== 'quit':
             myCart.showMyCart()
@@ -41,7 +40,11 @@ def run():
             myCart.add2Cart()
         elif response.lower() == 'show':
             myCart.showMyCart()
+        elif response.lower == 'remove':
+            myCart.removeFromCart()
             
+        
+
 
 run()
  
